@@ -64,6 +64,7 @@ export VAULT_ADDR=http://${aws_instance.server[0].public_ip}:8200
 %{endif}
 
 export NOMAD_E2E=1
+export NOMAD_TEST_CONSUL_ACLS=1
 export NOMAD_TOKEN=${data.local_file.nomad_token.content}
 export VAULT_TOKEN=${data.local_file.vault_token.content}
 
